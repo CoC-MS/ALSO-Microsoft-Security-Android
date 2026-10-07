@@ -17,4 +17,43 @@
 
 ---
 
+## 📦 Android configuration packages
+
+These are pre-generated policy exports, not an Android application or a build tool. Each package includes a `Config overview.md` and a `build-manifest.json` listing its exported resources. The manifest's file paths are relative to that package.
+
+| Package | Licence scope | Edition | Exported files |
+| --- | --- | --- | ---: |
+| [BP-Basic](Android/BP-Basic/Config%20overview.md) | 🏷️ **BP** | Basic | 5 |
+| [E3-E5-Basic](Android/E3-E5-Basic/Config%20overview.md) | 🏷️ **E3-E5** | Basic | 5 |
+| [E5-Basic](Android/E5-Basic/Config%20overview.md) | 🏷️ **E5** | Basic | 5 |
+| [BP-Adv](Android/BP-Adv/Config%20overview.md) | 🏷️ **BP** | Adv | 0 |
+| [E3-E5-Adv](Android/E3-E5-Adv/Config%20overview.md) | 🏷️ **E3-E5** | Adv | 0 |
+| [E5-Adv](Android/E5-Adv/Config%20overview.md) | 🏷️ **E5** | Adv | 0 |
+| [Full](Android/Full/Config%20overview.md) | 🏷️ **All** | Full | 31 |
+
+The three Basic packages currently contain the same five policy exports. The Adv packages have no policy exports. Licence builds are cumulative: E3-E5 includes BP, and E5 includes BP and E3-E5. Basic and Adv are separate editions; Adv is not an additional layer on top of Basic.
+
+> [!WARNING]
+> Choose one Android package per tenant. Do not combine Basic, Adv, and Full packages or import Full after another package; Intune imports can create duplicate policies rather than reconcile packages. Full contains all Android resources in this repository, not a guarantee that every resource is suitable for every tenant, enrollment mode, or licence.
+
+Cross-platform and tenant-wide supporting content is not included in this repository. Review dependencies and import only the resources required by the selected policies.
+
+## 🌐 Android coverage
+
+The Full package contains these workload folders. Availability and suitability depend on the policy, device enrollment mode, and tenant configuration.
+
+| Workload | Resources | Included content |
+| --- | ---: | --- |
+| `AppConfigurationManagedDevice` | 1 | Microsoft Defender managed app configuration for Android BYOD. |
+| `Applications` | 5 | Managed Home Screen, Microsoft Authenticator, Microsoft Defender Antivirus, Microsoft Intune, and Microsoft Outlook app exports. |
+| `AppProtection` | 1 | Android App Protection Policy. |
+| `AssignmentFilters` | 3 | Android Enterprise targeting and corporate/personal ownership filters. |
+| `CompliancePolicies` | 16 | Android Enterprise, BYOD, and AOSP health, OS version, encryption, password, integrity, and Defender-risk policies, plus other Android compliance exports. |
+| `DeviceConfiguration` | 2 | Corporate Android configuration and BYOD automatic enrollment to Microsoft Defender for Endpoint. |
+| `SettingsCatalog` | 3 | Android VPN/Common Criteria settings, wipe after ten failed logons, and threat scanning. |
+
+Notable capabilities include Defender integration for BYOD and device risk, Android Enterprise/BYOD/AOSP compliance policies, app protection and ownership-based assignment filters, and Settings Catalog security controls.
+
+---
+
 Start with [Prerequisites](docs/public/prerequisites.md), then choose a package using [File structure](docs/public/file-structure.md) and follow [How to import](docs/public/how-to-import.md).
