@@ -8,7 +8,7 @@ Partner-facing guidance for reviewing and deploying the Android policy exports i
 | Page | Purpose |
 | --- | --- |
 | 🚀 **[General prerequisites](general-prerequisites.md)** | Check the existing prerequisites for licensing, permissions, and deployment preparation. |
-| 🤖 **[Android prerequisites](android-prerequisites.md)** | Android-specific prerequisite guidance. |
+| 🤖 **[Android prerequisites and Intune settings](android-prerequisites.md)** | Prepare Android enrollment, review the main Intune settings areas, and deploy the exports safely. |
 | 📖 **[Policy naming](policy-naming.md)** | Understand the source naming convention and current names. |
 | 🏷️ **[Short-name exceptions](short-name-exceptions.md)** | Learn why some exported resources use shorter names. |
 | 📂 **[File structure](file-structure.md)** | Compare package folders and their contents. |

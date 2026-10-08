@@ -9,7 +9,7 @@
 | --- | --- |
 | 📦 **[Android packages](Android/Full/Config%20overview.md)** | Compare package scope and review package manifests. |
 | 🚀 **[General prerequisites](docs/public/general-prerequisites.md)** | Check the existing licensing, permissions, and deployment preparation. |
-| 🤖 **[Android prerequisites](docs/public/android-prerequisites.md)** | Android-specific prerequisite guidance. |
+| 🤖 **[Android prerequisites](docs/public/android-prerequisites.md)** | Android enrollment, Intune settings, and deployment guidance. |
 | 📖 **[Policy naming](docs/public/policy-naming.md)** | Review the naming format and existing exceptions. |
 | 📂 **[File structure](docs/public/file-structure.md)** | Find the package contents and understand the manifests. |
 | 📥 **[How to import](docs/public/how-to-import.md)** | Review and import selected Android exports. |
@@ -57,4 +57,16 @@ Notable capabilities include Defender integration for BYOD and device risk, Andr
 
 ---
 
-Start with [General prerequisites](docs/public/general-prerequisites.md) and [Android prerequisites](docs/public/android-prerequisites.md), then choose a package using [File structure](docs/public/file-structure.md) and follow [How to import](docs/public/how-to-import.md).
+## 🛠️ Manage Android in Intune
+
+Before importing policies, set up the Android management method that matches the devices:
+
+1. Prepare Intune users, groups, licences, and MDM authority.
+2. Connect Android Enterprise to Managed Google Play; use the separate AOSP flow for supported devices without Google Mobile Services.
+3. Choose the enrollment type: BYOD work profile, corporate-owned work profile, fully managed, dedicated/kiosk, or AOSP.
+4. Configure enrollment restrictions/profiles, device configuration, compliance, app deployment, app protection, and any Defender integration required by the scenario.
+5. Assign to pilot users or devices, verify enrollment and policy outcomes, then enforce Microsoft Entra Conditional Access and expand gradually.
+
+Android options vary by enrollment type and device. The [Android prerequisites and Intune settings guide](docs/public/android-prerequisites.md) explains the setup, main Intune settings areas, enrollment choices, and deployment checks. It also links to Microsoft's current Android settings references; consult those for the complete and changing catalog of supported settings.
+
+Start with [General prerequisites](docs/public/general-prerequisites.md), then choose one package using [File structure](docs/public/file-structure.md) and follow [How to import](docs/public/how-to-import.md).
