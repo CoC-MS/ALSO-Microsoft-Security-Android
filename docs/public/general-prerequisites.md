@@ -33,3 +33,14 @@ Review each policy's description, settings, references, and assignments. These e
 Choose one Android package for the tenant; do not combine packages or import Full after another package. Prepare a pilot user or device group for each enrollment scenario and a way to validate policy deployment, app availability, compliance, access, and user impact before expanding assignments.
 
 See [File structure](file-structure.md) to compare package contents, [Android prerequisites](android-prerequisites.md) for the enrollment and settings checklist, and [How to import](how-to-import.md) for the import sequence.
+
+## Microsoft references
+
+- [Microsoft Intune licensing](https://learn.microsoft.com/en-us/intune/fundamentals/licensing)
+- [Operating systems and browsers supported by Microsoft Intune](https://learn.microsoft.com/en-us/intune/fundamentals/ref-supported-platforms)
+- [Role-based access control (RBAC) with Microsoft Intune](https://learn.microsoft.com/en-us/intune/fundamentals/role-based-access-control/overview)
+- [Set the mobile device management authority](https://learn.microsoft.com/en-us/intune/fundamentals/setup-mdm-authority)
+- [Connect Intune to Managed Google Play](https://learn.microsoft.com/en-us/intune/device-enrollment/android/connect-managed-google-play)
+- [Configure Microsoft Defender for Endpoint with Intune](https://learn.microsoft.com/en-us/intune/device-security/microsoft-defender/configure-integration)
+- [Create assignment filters in Microsoft Intune](https://learn.microsoft.com/en-us/intune/fundamentals/filters/overview)
+- [Use Conditional Access with Microsoft Intune compliance policies](https://learn.microsoft.com/en-us/intune/device-security/conditional-access-integration/overview)
