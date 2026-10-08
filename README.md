@@ -8,7 +8,8 @@
 | Resource | Description |
 | --- | --- |
 | 📦 **[Android packages](Android/Full/Config%20overview.md)** | Compare package scope and review package manifests. |
-| 🚀 **[Prerequisites](docs/public/prerequisites.md)** | Check licensing, permissions, and deployment preparation. |
+| 🚀 **[General prerequisites](docs/public/general-prerequisites.md)** | Check the existing licensing, permissions, and deployment preparation. |
+| 🤖 **[Android prerequisites](docs/public/android-prerequisites.md)** | Android-specific prerequisite guidance. |
 | 📖 **[Policy naming](docs/public/policy-naming.md)** | Review the naming format and existing exceptions. |
 | 📂 **[File structure](docs/public/file-structure.md)** | Find the package contents and understand the manifests. |
 | 📥 **[How to import](docs/public/how-to-import.md)** | Review and import selected Android exports. |
@@ -56,4 +57,4 @@ Notable capabilities include Defender integration for BYOD and device risk, Andr
 
 ---
 
-Start with [Prerequisites](docs/public/prerequisites.md), then choose a package using [File structure](docs/public/file-structure.md) and follow [How to import](docs/public/how-to-import.md).
+Start with [General prerequisites](docs/public/general-prerequisites.md) and [Android prerequisites](docs/public/android-prerequisites.md), then choose a package using [File structure](docs/public/file-structure.md) and follow [How to import](docs/public/how-to-import.md).

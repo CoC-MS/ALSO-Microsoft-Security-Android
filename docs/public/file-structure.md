@@ -37,4 +37,4 @@ The `Full` package currently contains:
 
 Workload and resource names can be browsed under [`Android/Full`](../../Android/Full). Review the package overview and manifest before import. The separate cross-platform and tenant-wide `Shared` resources described by the source template are not included in this repository.
 
-See [Prerequisites](prerequisites.md) and [How to import](how-to-import.md) before deployment.
+See [General prerequisites](general-prerequisites.md), [Android prerequisites](android-prerequisites.md), and [How to import](how-to-import.md) before deployment.
