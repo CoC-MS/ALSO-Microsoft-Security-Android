@@ -11,7 +11,7 @@ Check these items before importing Android resources into Microsoft Intune.
 
 ## 🔐 Licensing and platform
 
-The repository provides `BP`, `E3-E5`, and `E5` Basic packages, plus matching Adv package names. Check the required licences and service availability for the policies you intend to use.
+The repository provides `BP`, `E3-E5`, and `E5` Basic packages, plus matching Adv package names. Treat these as licence classifications, not a substitute for checking entitlement: confirm the required licences and service availability for every policy you intend to use. Review the selected package's overview and manifest to understand its scope and included resources.
 
 Identify the target Android management scenario: Android Enterprise, personally owned work profile (BYOD), or AOSP. Confirm that each selected setting supports the target enrollment type and operating-system version.
 
@@ -19,7 +19,7 @@ Identify the target Android management scenario: Android Enterprise, personally 
 
 Use an account with the Intune permissions needed to import and manage the selected resources. Follow your organization's approval process for any consent requested by an import tool.
 
-Review each policy's description, settings, references, and assignments. Prepare tenant-specific application, group, filter, and service dependencies where the policy requires them. For app resources, confirm the relevant Android app deployment and Managed Google Play setup in the target tenant.
+Review each policy's description, settings, references, and assignments. Prepare tenant-specific application, group, filter, and service dependencies where the policy requires them. For Android Enterprise deployments that use Managed Google Play, confirm Intune is connected to the correct Managed Google Play account and that required apps are available to the tenant. Where a policy depends on Microsoft Defender for Endpoint or another service, confirm its tenant setup and licensing before import and assignment.
 
 ## 🧪 Deployment readiness
 
