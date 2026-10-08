@@ -1,4 +1,4 @@
-# 🚀 Prerequisites
+# 🚀 General prerequisites
 
 [Public documentation](README.md)
 

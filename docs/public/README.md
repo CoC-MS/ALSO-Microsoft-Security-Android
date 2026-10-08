@@ -7,7 +7,8 @@ Partner-facing guidance for reviewing and deploying the Android policy exports i
 
 | Page | Purpose |
 | --- | --- |
-| 🚀 **[Prerequisites](prerequisites.md)** | Check licensing, permissions, and Android deployment preparation. |
+| 🚀 **[General prerequisites](general-prerequisites.md)** | Check the existing prerequisites for licensing, permissions, and deployment preparation. |
+| 🤖 **[Android prerequisites](android-prerequisites.md)** | Android-specific prerequisite guidance. |
 | 📖 **[Policy naming](policy-naming.md)** | Understand the source naming convention and current names. |
 | 🏷️ **[Short-name exceptions](short-name-exceptions.md)** | Learn why some exported resources use shorter names. |
 | 📂 **[File structure](file-structure.md)** | Compare package folders and their contents. |
@@ -16,4 +17,4 @@ Partner-facing guidance for reviewing and deploying the Android policy exports i
 
 ---
 
-Start with [Prerequisites](prerequisites.md), then select a package using [File structure](file-structure.md) before following [How to import](how-to-import.md).
+Start with [General prerequisites](general-prerequisites.md) and [Android prerequisites](android-prerequisites.md), then select a package using [File structure](file-structure.md) before following [How to import](how-to-import.md).

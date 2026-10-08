@@ -2,7 +2,7 @@
 
 [Public documentation](README.md)
 
-Complete the [Prerequisites](prerequisites.md) and review [File structure](file-structure.md) before importing.
+Complete the [General prerequisites](general-prerequisites.md) and [Android prerequisites](android-prerequisites.md), then review [File structure](file-structure.md) before importing.
 
 This repository follows the source template's workflow using the [Micke M Intune Management Tool](https://github.com/Micke-K/IntuneManagement). Follow the tool's current setup and authentication instructions.
 
