@@ -9,7 +9,7 @@ This repository follows the source template's workflow using the [Micke M Intune
 ## Download and extract
 
 > [!IMPORTANT]
-> **Unzip the downloaded files into your OneDrive folder.** Windows File Explorer can fail to extract the long filenames and paths in these exports. Keep the destination path short (for example, a folder named `Android` directly under OneDrive). OneDrive does not remove Windows path limits; if Explorer still fails, use an extraction tool that supports long paths.
+> **Unzip the repository into your OneDrive folder.** Use a short, top-level destination such as `OneDrive\Android` rather than deeply nested folders. Windows File Explorer can fail to extract these exports because of their long filenames and full paths. OneDrive does not itself remove Explorer's path limits; if extraction still fails, use an archive tool that supports long paths and verify that all files were extracted before importing.
 
 1. Download this repository using **Code > Download ZIP**, then extract it into your OneDrive folder.
 
