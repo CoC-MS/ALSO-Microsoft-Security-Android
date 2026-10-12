@@ -7,38 +7,39 @@
 
 ## Android Licensing Guide
 
-Choose one standalone package. Package labels describe classifications; they do not confirm that your tenant is licensed for every included feature. Verify the required licences and service availability for each policy you intend to use, and review the package overview and manifest before importing.
+Choose one standalone package.
 
-### BP packages
+### ✅ E5 Folder (Full Experience)
 
-The BP packages are classified for BP licensing. Basic and Adv are separate editions, not cumulative layers.
+Package: [`E5-Basic`](Android/E5-Basic)
 
-| Package | Edition |
-| --- | --- |
-| [BP-Basic](Android/BP-Basic/Config%20overview.md) | Basic |
-| [BP-Adv](Android/BP-Adv/Config%20overview.md) | Adv |
+The **E5 folder** is intended for organizations that have access to full experience of Defender for Cloud apps with these licenses.
 
-### E3-E5 packages
+| License | Supported |
+|----------|----------|
+| Microsoft 365 E7 | ✅ Full support |
+| Microsoft 365 E5 | ✅ Full support |
+| Microsoft 365 E3 + Defender Suite | ✅ Full support |
+| Business Premium + Defender Suite | ✅ Full support |
+| Microsoft 365 F3 + Defender Suite | ✅ Full support |
+| Microsoft 365 F1 + Defender Suite | ✅ Full support |
 
-The E3-E5 packages are cumulative and include BP. Basic and Adv remain separate editions.
+### ⚠️ BP Folder (Limited Experience)
 
-| Package | Edition |
-| --- | --- |
-| [E3-E5-Basic](Android/E3-E5-Basic/Config%20overview.md) | Basic |
-| [E3-E5-Adv](Android/E3-E5-Adv/Config%20overview.md) | Adv |
+Package: [`BP-Basic`](Android/BP-Basic)
 
-### E5 packages
+The **Business Premium folder** is designed for organizations using Microsoft 365 Business Premium and other licenses with partial feature compatibility.
 
-The E5 packages are cumulative and include BP and E3-E5. Basic and Adv remain separate editions.
+| License | Supported Features |
+|----------|----------|
+| Microsoft 365 Business Premium | ⚠️ Supported with limitations (without full Defender for Cloud Apps experience) |
+| Microsoft 365 E3 | ⚠️ Supported with limitations (without full Defender for Cloud Apps experience) |
+| Microsoft 365 F3 | ⚠️ Supported with limitations (without full Defender for Cloud Apps experience) |
+| Microsoft 365 F1 | ⚠️ Intune settings only. Defender settings are not supported. |
 
-| Package | Edition |
-| --- | --- |
-| [E5-Basic](Android/E5-Basic/Config%20overview.md) | Basic |
-| [E5-Adv](Android/E5-Adv/Config%20overview.md) | Adv |
+> **Important:** Microsoft 365 F1 supports deployment of Intune configuration settings only. Microsoft Defender security policy settings included in this repository are not supported with F1 licensing.
 
-### Full package
-
-The [Full package](Android/Full/Config%20overview.md) contains all Android resources in this repository. It is not a guarantee that every resource is suitable for every tenant, enrollment mode, or licence.
+---
 
 | Resource | Description |
 | --- | --- |
