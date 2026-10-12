@@ -5,6 +5,41 @@
 > [!IMPORTANT]
 > These exports are starting points, not ready-made tenant configurations. Review licensing, settings, tenant-specific values, dependencies, and assignments; pilot policies before expanding deployment.
 
+## Android Licensing Guide
+
+Choose one standalone package. Package labels describe classifications; they do not confirm that your tenant is licensed for every included feature. Verify the required licences and service availability for each policy you intend to use, and review the package overview and manifest before importing.
+
+### BP packages
+
+The BP packages are classified for BP licensing. Basic and Adv are separate editions, not cumulative layers.
+
+| Package | Edition |
+| --- | --- |
+| [BP-Basic](Android/BP-Basic/Config%20overview.md) | Basic |
+| [BP-Adv](Android/BP-Adv/Config%20overview.md) | Adv |
+
+### E3-E5 packages
+
+The E3-E5 packages are cumulative and include BP. Basic and Adv remain separate editions.
+
+| Package | Edition |
+| --- | --- |
+| [E3-E5-Basic](Android/E3-E5-Basic/Config%20overview.md) | Basic |
+| [E3-E5-Adv](Android/E3-E5-Adv/Config%20overview.md) | Adv |
+
+### E5 packages
+
+The E5 packages are cumulative and include BP and E3-E5. Basic and Adv remain separate editions.
+
+| Package | Edition |
+| --- | --- |
+| [E5-Basic](Android/E5-Basic/Config%20overview.md) | Basic |
+| [E5-Adv](Android/E5-Adv/Config%20overview.md) | Adv |
+
+### Full package
+
+The [Full package](Android/Full/Config%20overview.md) contains all Android resources in this repository. It is not a guarantee that every resource is suitable for every tenant, enrollment mode, or licence.
+
 | Resource | Description |
 | --- | --- |
 | 📦 **[Android packages](Android/Full/Config%20overview.md)** | Compare package scope and review package manifests. |
