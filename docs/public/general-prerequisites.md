@@ -11,7 +11,7 @@ Check these items before importing Android resources into Microsoft Intune. For 
 
 ## 🔐 Licensing and platform
 
-The repository provides `BP`, `E3-E5`, and `E5` licence-classified packages, with Basic and Adv package names, as well as a Full package. These labels describe package classifications; they do not confirm that your tenant is licensed for every included feature. Check the required licences and service availability for each policy you intend to use. Review the selected package's overview and manifest to understand its scope and included resources.
+The repository provides `BP` and `E5` licence-classified packages, as well as a Full package. These labels describe package classifications; they do not confirm that your tenant is licensed for every included feature. Check the required licences and service availability for each policy you intend to use. Review the selected package's overview and manifest to understand its scope and included resources.
 
 Identify the target management scenario and ownership: Android Enterprise personally owned work profile (BYOD), corporate-owned work profile (COPE), fully managed, dedicated, or AOSP. Confirm that every selected setting and app supports the target enrollment type, device, and Android version. Do not assume that an Android Enterprise setting or Google-dependent feature applies to AOSP.
 
@@ -19,7 +19,7 @@ Identify the target management scenario and ownership: Android Enterprise person
 
 Use an account with the Intune permissions needed to import and manage the selected resources, and follow your organization's approval process for any consent requested by an import tool. Confirm Intune is the MDM authority and that users and groups have the appropriate licences and permissions.
 
-Review each policy's description, settings, references, and assignments. These exports do not configure tenant-wide prerequisites such as enrollment restrictions and profiles, groups, Conditional Access, or service connections. Prepare the tenant-specific dependencies required by the policies you select:
+Review each policy's description, settings, references, and assignments. Packages include Android-applicable Conditional Access policies and supporting groups, but importing exports does not complete tenant-wide setup. Review group membership and access policies separately, and prepare enrollment restrictions, profiles, service connections, and other tenant-specific dependencies required by the policies you select:
 
 | Dependency | Check before import or assignment |
 | --- | --- |

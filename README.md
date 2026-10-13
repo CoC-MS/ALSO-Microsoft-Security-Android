@@ -11,7 +11,7 @@ Choose one standalone package.
 
 ### ✅ E5 Folder (Full Experience)
 
-Package: [`E5-Basic`](Android/E5-Basic)
+Package: [`E5`](Android/E5)
 
 The **E5 folder** is intended for organizations that have access to full experience of Defender for Cloud apps with these licenses.
 
@@ -26,7 +26,7 @@ The **E5 folder** is intended for organizations that have access to full experie
 
 ### ⚠️ BP Folder (Limited Experience)
 
-Package: [`BP-Basic`](Android/BP-Basic)
+Package: [`BP`](Android/BP)
 
 The **Business Premium folder** is designed for organizations using Microsoft 365 Business Premium and other licenses with partial feature compatibility.
 
@@ -58,22 +58,18 @@ The **Business Premium folder** is designed for organizations using Microsoft 36
 
 These are pre-generated policy exports, not an Android application or a build tool. Each package includes a `Config overview.md` and a `build-manifest.json` listing its exported resources. The manifest's file paths are relative to that package.
 
-| Package | Licence scope | Edition | Exported files |
-| --- | --- | --- | ---: |
-| [BP-Basic](Android/BP-Basic/Config%20overview.md) | 🏷️ **BP** | Basic | 5 |
-| [E3-E5-Basic](Android/E3-E5-Basic/Config%20overview.md) | 🏷️ **E3-E5** | Basic | 5 |
-| [E5-Basic](Android/E5-Basic/Config%20overview.md) | 🏷️ **E5** | Basic | 5 |
-| [BP-Adv](Android/BP-Adv/Config%20overview.md) | 🏷️ **BP** | Adv | 0 |
-| [E3-E5-Adv](Android/E3-E5-Adv/Config%20overview.md) | 🏷️ **E3-E5** | Adv | 0 |
-| [E5-Adv](Android/E5-Adv/Config%20overview.md) | 🏷️ **E5** | Adv | 0 |
-| [Full](Android/Full/Config%20overview.md) | 🏷️ **All** | Full | 31 |
+| Package | Licence scope | Exported files |
+| --- | --- | ---: |
+| [BP](Android/BP/Config%20overview.md) | 🏷️ **BP** | 13 |
+| [E5](Android/E5/Config%20overview.md) | 🏷️ **E5** | 13 |
+| [Full](Android/Full/Config%20overview.md) | 🏷️ **All** | 39 |
 
 
 
 > [!WARNING]
-> Choose one Android package per tenant. Do not combine Basic, Adv, and Full packages or import Full after another package; Intune imports can create duplicate policies rather than reconcile packages. Full contains all Android resources in this repository, not a guarantee that every resource is suitable for every tenant, enrollment mode, or licence.
+> Choose one Android package per tenant. Do not combine BP, E5, and Full packages or import Full after another package; Intune imports can create duplicate policies rather than reconcile packages. Full contains all Android resources in this repository, not a guarantee that every resource is suitable for every tenant, enrollment mode, or licence.
 
-Cross-platform and tenant-wide supporting content is not included in this repository. Review dependencies and import only the resources required by the selected policies.
+Each package includes Android-applicable Conditional Access policies, supporting groups, and a migration table. Separate Shared packages are not included. Review dependencies and import only the resources required by the selected policies.
 
 ## 🌐 Android coverage
 
@@ -86,8 +82,12 @@ The Full package contains these workload folders. Availability and suitability d
 | `AppProtection` | 1 | Android App Protection Policy. |
 | `AssignmentFilters` | 3 | Android Enterprise targeting and corporate/personal ownership filters. |
 | `CompliancePolicies` | 16 | Android Enterprise, BYOD, and AOSP health, OS version, encryption, password, integrity, and Defender-risk policies, plus other Android compliance exports. |
+| `ConditionalAccess` | 4 | Android-applicable app protection, app-enforced restrictions, and compliant-device access policies. |
 | `DeviceConfiguration` | 2 | Corporate Android configuration and BYOD automatic enrollment to Microsoft Defender for Endpoint. |
+| `Groups` | 3 | Supporting Conditional Access exclusion groups. |
 | `SettingsCatalog` | 3 | Android VPN/Common Criteria settings, wipe after ten failed logons, and threat scanning. |
+
+`MigrationTable.json` is also included in the Full package's manifest.
 
 Notable capabilities include Defender integration for BYOD and device risk, Android Enterprise/BYOD/AOSP compliance policies, app protection and ownership-based assignment filters, and Settings Catalog security controls.
 

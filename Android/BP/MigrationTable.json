@@ -1,0 +1,21 @@
+{
+  "TenantId": "044c9c57-65ae-4850-aa00-ff92281f867c",
+  "Objects": [
+    {
+      "DisplayName": "ALSO-CA-BSAccounts- Exclude",
+      "Id": "57802f85-25a5-4c18-8bbb-a997259455a0",
+      "Type": "Group"
+    },
+    {
+      "DisplayName": "BP-ALSO-CA005-Global-Office365-iOSAndAndroid-ClientApps-Unmanaged-Grant-RequireAppEnforcedRestrictions- Exclude",
+      "Id": "af42ab8f-4f12-4fc0-95e4-d8ea2f3c4c7f",
+      "Type": "Group"
+    },
+    {
+      "DisplayName": "BP-ALSO-CA110-Admins-AllApps-iOSandAndroid-Grant-RequireCompliantDevice -Exclude",
+      "Id": "04111cd6-fe21-48be-bf31-eab50efa4d98",
+      "Type": "Group"
+    }
+  ],
+  "Organization": "Vlads Demo tenant"
+}

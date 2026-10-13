@@ -8,18 +8,14 @@ This repository contains pre-generated Android policy packages. The workload fol
 
 | Package | Resources in manifest | Scope |
 | --- | ---: | --- |
-| [`BP-Basic`](../../Android/BP-Basic/Config%20overview.md) | 5 | Basic package at BP licence classification. |
-| [`E3-E5-Basic`](../../Android/E3-E5-Basic/Config%20overview.md) | 5 | Basic package at E3-E5 licence classification. |
-| [`E5-Basic`](../../Android/E5-Basic/Config%20overview.md) | 5 | Basic package at E5 licence classification. |
-| [`BP-Adv`](../../Android/BP-Adv/Config%20overview.md) | 0 | Overview and manifest only; no resources are currently listed. |
-| [`E3-E5-Adv`](../../Android/E3-E5-Adv/Config%20overview.md) | 0 | Overview and manifest only; no resources are currently listed. |
-| [`E5-Adv`](../../Android/E5-Adv/Config%20overview.md) | 0 | Overview and manifest only; no resources are currently listed. |
-| [`Full`](../../Android/Full/Config%20overview.md) | 31 | All Android resources in this repository's Full package. |
+| [`BP`](../../Android/BP/Config%20overview.md) | 13 | Android resources at BP licence classification, with applicable Conditional Access policies and dependencies. |
+| [`E5`](../../Android/E5/Config%20overview.md) | 13 | Android resources up to E5 licence classification, with applicable Conditional Access policies and dependencies. |
+| [`Full`](../../Android/Full/Config%20overview.md) | 39 | All Android resources, with applicable Conditional Access policies and dependencies. |
 
-The three Basic package manifests each list the same five policy exports. Check the selected package's `build-manifest.json` for its exact file list. The manifest is package metadata, not an Intune policy to import.
+Check the selected package's `build-manifest.json` for its exact file list, including the supporting `MigrationTable.json`. The manifest is package metadata, not an Intune policy to import.
 
 > [!WARNING]
-> Choose one Android package for a tenant. Do not combine Basic, Adv, or Full packages, or import Full after another package; overlapping imports can create duplicate policies.
+> Choose one Android package for a tenant. Do not combine BP, E5, or Full packages, or import Full after another package; overlapping imports can create duplicate policies.
 
 ## 🗂️ Full package workloads
 
@@ -32,9 +28,11 @@ The `Full` package currently contains:
 | `AppProtection` | 1 |
 | `AssignmentFilters` | 3 |
 | `CompliancePolicies` | 16 |
+| `ConditionalAccess` | 4 |
 | `DeviceConfiguration` | 2 |
+| `Groups` | 3 |
 | `SettingsCatalog` | 3 |
 
-Workload and resource names can be browsed under [`Android/Full`](../../Android/Full). Review the package overview and manifest before import. The separate cross-platform and tenant-wide `Shared` resources described by the source template are not included in this repository.
+The Full package also includes `MigrationTable.json`. Workload and resource names can be browsed under [`Android/Full`](../../Android/Full). Review the package overview and manifest before import. The separate `Shared` packages described by the source template are not included in this repository.
 
 See [General prerequisites](general-prerequisites.md), [Android prerequisites](android-prerequisites.md), and [How to import](how-to-import.md) before deployment.
