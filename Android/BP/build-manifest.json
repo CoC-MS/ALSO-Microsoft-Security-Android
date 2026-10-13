@@ -1,14 +1,22 @@
 {
   "schemaVersion": "2.0",
   "platform": "Android",
-  "edition": "Basic",
+  "edition": "BP",
   "licence": "BP",
   "rootDirectory": ".",
   "sharedAndUnclassifiedIncluded": false,
   "unknownPlatformFiles": [],
   "files": [
+    "ConditionalAccess/BP-ALSO-CA005-Global-Microsoft365-iOSAndAndroid-ClientApps-Unmanaged-Grant-RequireAppProtectionPoliciy.json",
+    "ConditionalAccess/BP-ALSO-CA005-Global-Office365-iOSAndAndroid-ClientApps-Unmanaged-Grant-RequireAppEnforcedRestrictions.json",
+    "ConditionalAccess/BP-ALSO-CA110-Admins-AllApps-iOSandAndroid-Grant-RequireCompliantDevice.json",
+    "ConditionalAccess/BP-ALSO-CA210-Internals-AllApps-iOSandAndroid-Grant-RequireCompliantDevice.json",
     "DeviceConfiguration/BP – ALSO – LI – Basic – Corporate Android Device Configuration Profile.json",
     "DeviceConfiguration/BP – ALSO – LI – Basic – v1.0 – Android (BYOD) – Auto Enrollment to MDE - D.json",
+    "Groups/ALSO-CA-BSAccounts- Exclude.json",
+    "Groups/BP-ALSO-CA005-Global-Office365-iOSAndAndroid-ClientApps-Unmanaged-Grant-RequireAppEnforcedRestrictions- Exclude.json",
+    "Groups/BP-ALSO-CA110-Admins-AllApps-iOSandAndroid-Grant-RequireCompliantDevice -Exclude.json",
+    "MigrationTable.json",
     "SettingsCatalog/BP – ALSO – LI – Basic – Android Enterprice - Disable vpn & Require Common criteria.json",
     "SettingsCatalog/BP – ALSO – LI – Basic – v1.0 – Android Enterprice – Device Restriction - Logon Failure Wipe 10 - D.json",
     "SettingsCatalog/BP – ALSO – LI – Basic – v1.0 – Android Enterprice – Device Restriction - Threat Scan - D.json"

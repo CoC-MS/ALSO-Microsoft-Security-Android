@@ -21,7 +21,7 @@ This repository follows the source template's workflow using the [Micke M Intune
 
 ## Sign in and import
 
-The screenshots below come from the [Conditional Access repository's import guide](https://github.com/CoC-MS/ALSO-Microsoft-Security-Conditional-Access#how-to-import). They illustrate the shared tool workflow; select the Android resource types described here, not the Conditional Access resource types in that guide. The interface may differ in newer tool versions.
+The screenshots below come from the [Conditional Access repository's import guide](https://github.com/CoC-MS/ALSO-Microsoft-Security-Conditional-Access#how-to-import). They illustrate the shared tool workflow; select only the resource types required from your chosen Android package, including Conditional Access dependencies when needed. The interface may differ in newer tool versions.
 
 1. The command window and tool UI will open. Use the icon in the upper-right corner to sign in to the intended Microsoft Intune tenant with an account that has the required permissions. Confirm the tenant before making changes.
 
@@ -36,7 +36,7 @@ The screenshots below come from the [Conditional Access repository's import guid
 
    ![Bulk menu showing the Import action](https://github.com/user-attachments/assets/9e8b32ce-93fe-4ef8-9c19-325d138add8c)
 
-5. Select the chosen package's folder and only the required Android resource types from its workload folders. Import only the required JSON resources; the manifest is metadata, not a policy to import. Review and import required app and assignment-filter dependencies before policies that reference them. Leave assignment import disabled.
+5. Select the chosen package's folder and only the required resource types from its workload folders. Import only the required JSON resources; the manifest and migration table are metadata, not policies to import. Review and import required app, group, and assignment-filter dependencies before policies that reference them. Review the included Conditional Access policies and exclusion-group membership separately before enabling access controls. Leave assignment import disabled.
 6. Inspect imported resources in Intune and review errors in the tool's command window. Update tenant-specific values, applications, groups, filters, and scope as needed.
 7. Assign reviewed policies to a pilot group, validate deployment and user impact, then expand in stages.
 
