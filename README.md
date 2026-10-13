@@ -56,7 +56,7 @@ The **Business Premium folder** is designed for organizations using Microsoft 36
 
 ## 📦 Android configuration packages
 
-These are pre-generated policy exports, not an Android application or a build tool. Each package includes a `Config overview.md` and a `build-manifest.json` listing its exported resources. The manifest's file paths are relative to that package.
+These are pre-generated policy exports, not an Android application or a build tool. Each package includes a `Config overview.md` and a `build-manifest.json` listing its exported resources. The manifest's file paths are relative to that package. This is so you can get a quick overview over the .json files
 
 | Package | Licence scope | Exported files |
 | --- | --- | ---: |
