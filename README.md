@@ -68,7 +68,7 @@ These are pre-generated policy exports, not an Android application or a build to
 | [E5-Adv](Android/E5-Adv/Config%20overview.md) | 🏷️ **E5** | Adv | 0 |
 | [Full](Android/Full/Config%20overview.md) | 🏷️ **All** | Full | 31 |
 
-The three Basic packages currently contain the same five policy exports. The Adv packages have no policy exports. Licence builds are cumulative: E3-E5 includes BP, and E5 includes BP and E3-E5. Basic and Adv are separate editions; Adv is not an additional layer on top of Basic.
+
 
 > [!WARNING]
 > Choose one Android package per tenant. Do not combine Basic, Adv, and Full packages or import Full after another package; Intune imports can create duplicate policies rather than reconcile packages. Full contains all Android resources in this repository, not a guarantee that every resource is suitable for every tenant, enrollment mode, or licence.
