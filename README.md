@@ -1,10 +1,39 @@
 # 🤖 ALSO Microsoft Security - Android
 
-> Microsoft Intune security policy exports for Android Enterprise, personally owned work profiles (BYOD), AOSP, app protection, and Microsoft Defender.
+> Microsoft Intune security policy exports and supporting artifacts for Android Enterprise, personally owned work profiles (BYOD), AOSP, app protection, and Microsoft Defender.
 
 > [!IMPORTANT]
 > These exports are starting points, not ready-made tenant configurations. Review licensing, settings, tenant-specific values, dependencies, and assignments; pilot policies before expanding deployment.
 
+---
+
+<a id="getting-started"></a>
+## 🚀 Getting started
+
+1. ✅ Review [General prerequisites](docs/public/general-prerequisites.md) and [Android prerequisites](docs/public/android-prerequisites.md).
+2. 📂 [Download the repository ZIP](https://github.com/CoC-MS/ALSO-Microsoft-Security-Android/archive/refs/heads/main.zip) and follow the extraction guidance in [How to import](docs/public/how-to-import.md).
+3. 📥 Follow [How to import](docs/public/how-to-import.md) to import only the resources you need. Review tenant-specific settings and dependencies, and leave assignment import disabled.
+4. 🚀 Assign reviewed policies to a pilot group, check deployment reports and user impact, then expand in stages.
+
+**Need help or have feedback?** See [Reporting issues](docs/public/reporting-issues.md) to report problems or suggest improvements.
+
+> [!WARNING]
+> All issues are public; do not include sensitive information.
+
+### Quick navigation
+
+| Section | What you will find |
+| --- | --- |
+| [Getting started](#getting-started) | Prerequisites, download, package selection, import, and staged rollout. |
+| [Android licensing guide](#android-licensing-guide) | Review the BP and E5 package licensing guidance. |
+| [Android configuration packages](#android-configuration-packages) | Compare package scope and open their overviews and manifests. |
+| [Android coverage](#android-coverage) | Workloads and security areas covered by the Full package. |
+| [Notable capabilities](#notable-capabilities) | Key features and deployment considerations. |
+| [Documentation](#documentation) | Links to supporting guides and the repository license. |
+
+---
+
+<a id="android-licensing-guide"></a>
 ## Android Licensing Guide
 
 Choose one standalone package.
@@ -39,70 +68,63 @@ The **Business Premium folder** is designed for organizations using Microsoft 36
 
 > **Important:** Microsoft 365 F1 supports deployment of Intune configuration settings only. Microsoft Defender security policy settings included in this repository are not supported with F1 licensing.
 
----
-
-| Resource | Description |
-| --- | --- |
-| 📦 **[Android packages](Android/Full/Config%20overview.md)** | Compare package scope and review package manifests. |
-| 🚀 **[General prerequisites](docs/public/general-prerequisites.md)** | Check the existing licensing, permissions, and deployment preparation. |
-| 🤖 **[Android prerequisites](docs/public/android-prerequisites.md)** | Android enrollment, Intune settings, and deployment guidance. |
-| 📖 **[Policy naming](docs/public/policy-naming.md)** | Review the naming format and existing exceptions. |
-| 📂 **[File structure](docs/public/file-structure.md)** | Find the package contents and understand the manifests. |
-| 📥 **[How to import](docs/public/how-to-import.md)** | Review and import selected Android exports. |
-| 🐛 **[Reporting issues](docs/public/reporting-issues.md)** | Report problems without disclosing tenant information. |
-| 📜 **[License](LICENSE)** | Read the repository license. |
+> [!WARNING]
+> Choose one Android package per tenant. Do not combine BP, E5, and Full, or import Full after another package; Intune imports can create duplicate policies rather than reconcile packages. Review tenant-specific values, dependencies, licences, and assignments before import.
 
 ---
 
+<a id="android-configuration-packages"></a>
 ## 📦 Android configuration packages
 
-These are pre-generated policy exports, not an Android application or a build tool. Each package includes a `Config overview.md` and a `build-manifest.json` listing its exported resources. The manifest's file paths are relative to that package. This is so you can get a quick overview over the .json files
+Each package includes a `Config overview.md` and a `build-manifest.json` listing its exported resources. Manifest paths are relative to the package; check the selected package's manifest for its exact file list.
 
-| Package | Licence scope | Exported files |
-| --- | --- | ---: |
-| [BP](Android/BP/Config%20overview.md) | 🏷️ **BP** | 13 |
-| [E5](Android/E5/Config%20overview.md) | 🏷️ **E5** | 13 |
-| [Full](Android/Full/Config%20overview.md) | 🏷️ **All** | 39 |
+| Package overview | Licence classification | Scope | Resources in manifest | Manifest |
+| --- | --- | --- | ---: | --- |
+| [BP](Android/BP/Config%20overview.md) | 🏷️ **BP** | Android policies classified for BP | 13 | [BP manifest](Android/BP/build-manifest.json) |
+| [E5](Android/E5/Config%20overview.md) | 🏷️ **BP + E3-E5 + E5** | Android policies classified up to E5 | 13 | [E5 manifest](Android/E5/build-manifest.json) |
+| [Full](Android/Full/Config%20overview.md) | 🏷️ **All** | All Android resources in this repository | 39 | [Full manifest](Android/Full/build-manifest.json) |
 
+Manifest counts include listed resources and supporting artifacts such as the migration table. The manifest and migration table are metadata, not Intune policies to import.
 
+The BP and E5 packages contain their classified Android resources and applicable Conditional Access policies and dependencies. Full contains all Android resources in this repository, including resources not classified for BP or E5. Review the package overview and manifest before importing. Separate Shared packages are not included in this repository.
 
-> [!WARNING]
-> Choose one Android package per tenant. Do not combine BP, E5, and Full packages or import Full after another package; Intune imports can create duplicate policies rather than reconcile packages. Full contains all Android resources in this repository, not a guarantee that every resource is suitable for every tenant, enrollment mode, or licence.
-
-Each package includes Android-applicable Conditional Access policies, supporting groups, and a migration table. Separate Shared packages are not included. Review dependencies and import only the resources required by the selected policies.
-
+<a id="android-coverage"></a>
 ## 🌐 Android coverage
 
-The Full package contains these workload folders. Availability and suitability depend on the policy, device enrollment mode, and tenant configuration.
+The Full package contains the following workload folders. Availability and suitability depend on the policy, device, enrollment type, and tenant configuration.
 
-| Workload | Resources | Included content |
-| --- | ---: | --- |
-| `AppConfigurationManagedDevice` | 1 | Microsoft Defender managed app configuration for Android BYOD. |
-| `Applications` | 5 | Managed Home Screen, Microsoft Authenticator, Microsoft Defender Antivirus, Microsoft Intune, and Microsoft Outlook app exports. |
-| `AppProtection` | 1 | Android App Protection Policy. |
-| `AssignmentFilters` | 3 | Android Enterprise targeting and corporate/personal ownership filters. |
-| `CompliancePolicies` | 16 | Android Enterprise, BYOD, and AOSP health, OS version, encryption, password, integrity, and Defender-risk policies, plus other Android compliance exports. |
-| `ConditionalAccess` | 4 | Android-applicable app protection, app-enforced restrictions, and compliant-device access policies. |
-| `DeviceConfiguration` | 2 | Corporate Android configuration and BYOD automatic enrollment to Microsoft Defender for Endpoint. |
-| `Groups` | 3 | Supporting Conditional Access exclusion groups. |
-| `SettingsCatalog` | 3 | Android VPN/Common Criteria settings, wipe after ten failed logons, and threat scanning. |
+| Area | Included content |
+| --- | --- |
+| 📱 **Applications** | Microsoft Intune, Authenticator, Defender Antivirus, Outlook, and Managed Home Screen app exports. |
+| 🛡️ **Compliance and device health** | Android Enterprise, BYOD, and AOSP compliance policies for OS version, encryption, passwords, integrity, and Defender risk. |
+| 🔐 **App protection and configuration** | Android App Protection Policy and Microsoft Defender managed app configuration for BYOD. |
+| 🎯 **Conditional Access and targeting** | Android-applicable Conditional Access policies, supporting groups, and assignment filters for Android Enterprise and device ownership. Review scope and dependencies before enabling. |
+| ⚙️ **Device configuration** | Corporate Android configuration and BYOD automatic enrollment to Microsoft Defender for Endpoint. |
+| 🧰 **Settings Catalog** | Android VPN/Common Criteria settings, wipe after ten failed logons, and threat scanning. |
+| 📋 **Supporting artifacts** | Migration table and other package resources listed in the manifest. |
 
-`MigrationTable.json` is also included in the Full package's manifest.
+See the [Full package overview](Android/Full/Config%20overview.md) and [manifest](Android/Full/build-manifest.json) for the exact contents.
 
-Notable capabilities include Defender integration for BYOD and device risk, Android Enterprise/BYOD/AOSP compliance policies, app protection and ownership-based assignment filters, and Settings Catalog security controls.
+<a id="notable-capabilities"></a>
+### ✨ Notable capabilities
+
+- 🛡️ **Defender integration and device risk:** BYOD onboarding and app configuration, Defender app exports, and compliance policies that can consume mobile threat-defense risk signals. Confirm connector setup, licensing, and enrollment compatibility.
+- 📱 **Multiple Android management scenarios:** Resources cover Android Enterprise personally owned work profiles, corporate-owned devices, and AOSP scenarios. Confirm each setting and app supports your target enrollment type and device.
+- 🔐 **Compliance and app protection:** Android compliance exports cover device health, OS, encryption, password, integrity, and risk settings; the App Protection Policy helps protect organizational data within supported apps.
+- 🎯 **Conditional Access and assignment filters:** Android-applicable access policies, supporting groups, and ownership/enrollment filters are included. Review their scope and dependencies carefully and test access with a pilot before enforcement.
+- ⚙️ **Device security settings:** Settings Catalog exports include VPN/Common Criteria settings, wipe after ten failed logons, and threat scanning. Verify platform support and user impact before assignment.
 
 ---
 
-## 🛠️ Manage Android in Intune
+<a id="documentation"></a>
+## 📚 Documentation
 
-Before importing policies, set up the Android management method that matches the devices:
-
-1. Prepare Intune users, groups, licences, and MDM authority.
-2. Connect Android Enterprise to Managed Google Play; use the separate AOSP flow for supported devices without Google Mobile Services.
-3. Choose the enrollment type: BYOD work profile, corporate-owned work profile, fully managed, dedicated/kiosk, or AOSP.
-4. Configure enrollment restrictions/profiles, device configuration, compliance, app deployment, app protection, and any Defender integration required by the scenario.
-5. Assign to pilot users or devices, verify enrollment and policy outcomes, then enforce Microsoft Entra Conditional Access and expand gradually.
-
-Android options vary by enrollment type and device. The [Android prerequisites and Intune settings guide](docs/public/android-prerequisites.md) explains the setup, main Intune settings areas, enrollment choices, and deployment checks. It also links to Microsoft's current Android settings references; consult those for the complete and changing catalog of supported settings.
-
-Start with [General prerequisites](docs/public/general-prerequisites.md), then choose one package using [File structure](docs/public/file-structure.md) and follow [How to import](docs/public/how-to-import.md).
+| Documentation | Overview |
+| --- | --- |
+| 🚀 [**General prerequisites**](docs/public/general-prerequisites.md) | Check licensing, permissions, service dependencies, and deployment preparation. |
+| 🤖 [**Android prerequisites and Intune settings**](docs/public/android-prerequisites.md) | Prepare Android enrollment, review Intune settings areas, and deploy the exports safely. |
+| 📦 [**Android packages**](Android/Full/Config%20overview.md) | Review the Full package scope and deployment notes. |
+| 📖 [**Policy naming**](docs/public/policy-naming.md) | Review the naming format and existing exceptions. |
+| 🏷️ [**Short-name exceptions**](docs/public/short-name-exceptions.md) | Understand why some exported resources use shorter names. |
+| 📂 [**File structure**](docs/public/file-structure.md) | Find package contents and understand the manifests. |
+| 📜 [**License**](LICENSE) | Read the repository license. |
