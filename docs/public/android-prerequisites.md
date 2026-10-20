@@ -4,6 +4,10 @@
 
 **Disclaimer:** Licensing prerequisites and feature availability listed on this page may be incorrect, incomplete, or outdated. We strongly recommend verifying all licensing information against the latest official Microsoft licensing documentation before making any purchasing or deployment decisions.
 
+**Enterprise licenses:** [Microsoft Enterprise Plan Comparison](https://cdn-dynmedia-1.microsoft.com/is/content/microsoftcorp/microsoft/bade/documents/products-and-services/en-us/education/Modern-Work-Plan-Comparison-Enterprise.pdf)
+
+**SMB licenses:** [Microsoft SMB Plan Comparison](https://cdn-dynmedia-1.microsoft.com/is/content/microsoftcorp/microsoft/bade/documents/products-and-services/en-us/education/Modern-Work-Plan-Comparison-Enterprise.pdf)
+
 This guide covers the Android-specific tenant setup and the main Intune settings areas to review before deploying this repository's Android exports. Intune's Android options vary by enrollment type, device capabilities, licensing, and tenant configuration; this is a deployment checklist, not a copy of every setting Microsoft exposes.
 
 > [!IMPORTANT]
