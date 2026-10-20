@@ -2,6 +2,8 @@
 
 [Public documentation](README.md)
 
+**Disclaimer:** Licensing prerequisites and feature availability listed on this page may be incorrect, incomplete, or outdated. We strongly recommend verifying all licensing information against the latest official Microsoft licensing documentation before making any purchasing or deployment decisions.
+
 This guide covers the Android-specific tenant setup and the main Intune settings areas to review before deploying this repository's Android exports. Intune's Android options vary by enrollment type, device capabilities, licensing, and tenant configuration; this is a deployment checklist, not a copy of every setting Microsoft exposes.
 
 > [!IMPORTANT]

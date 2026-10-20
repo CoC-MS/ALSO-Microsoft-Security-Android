@@ -36,6 +36,8 @@
 <a id="android-licensing-guide"></a>
 ## Android Licensing Guide
 
+**Disclaimer:** Licensing prerequisites and feature availability listed on this page may be incorrect, incomplete, or outdated. We strongly recommend verifying all licensing information against the latest official Microsoft licensing documentation before making any purchasing or deployment decisions.
+
 Choose one standalone package.
 
 ### ✅ E5 Folder (Full Experience)
