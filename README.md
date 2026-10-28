@@ -42,7 +42,7 @@ Choose one standalone package.
 
 Package: [`E5`](Android/E5)
 
-The **E5 folder** is intended for organizations that have access to full experience of Defender for Cloud apps with these licenses.
+The **E5 folder** is intended for organizations that have access to the full experience of Defender for Cloud Apps with these licenses.
 
 | License | Supported |
 |----------|----------|
