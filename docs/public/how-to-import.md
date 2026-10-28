@@ -1,5 +1,5 @@
 https://github.com/user-attachments/assets/84003286-8a8d-4675-83a2-1ec0567c69a8
-# The video shows the Windows repository, same logic applies to this
+# The video shows the Windows repository; the same workflow applies here.
 
 # 📥 How to import
 
